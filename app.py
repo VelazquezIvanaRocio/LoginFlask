@@ -12,7 +12,7 @@ app.config['MYSQL_CURSOR']='DictCursor'
 mysql=MySQL(app)
 
 @app.route('/')
-def homre():
+def home():
     return render_template('index.html')
 
 
@@ -24,20 +24,22 @@ def admin():
 #FUNCION DE LOGIN
 @app.route("/acceso-login", methods =["POST", "GET"])
 def login():
-    
-    if request.method== 'POST' and 'txtCorreo' in request.form and 'txtPassword': 
+   
+    if request.method== 'POST' and 'txtCorreo' in request.form and 'txtPassword' in request.form: 
         _correo= request.form ['txtCorreo']
         _password=request.form['txtPassword'] 
         
         cur=mysql.connection.cursor()
         cur.execute('SELECT * FROM usuarios WHERE correo = %s AND password = %s', (_correo, _password,))
         account = cur.fetchone() 
+        print(account)
            
         if account :
             session['logueado']=True
             session['id']=account['id']
-            
+            print(account)
             return render_template("admin.html")
+            print(account)
         else:
             return render_template('index.html', mensaje='usuario incorrecto')
     return render_template ('index.html')
