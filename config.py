@@ -5,3 +5,4 @@ MYSQL_DB='login'
 HEX_SEC_KEY='$2b$12$V1f1XFgNUD0PoK8Vsmym0eJuEvZMV0qxB.qCt3NiISo'
 
 ### 2. Run the application:
+#$2b$12$V1f1XFgNUD0PoK8Vsmym0eJuEvZMV0qxB.qCt3NiISo sixitse2023
