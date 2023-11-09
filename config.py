@@ -1,12 +1,7 @@
-class DevelopmentConfig():
-    DEBUG=True 
-    MYSQL_HOST='172.16.22.206'
-    MYSQL_USER='rociov'
-    MYSQL_PASSWORD='sixitse2023'
-    MYSQL_DB='dicc'
-    
-    
-    
-config = {
-    'development':DevelopmentConfig
-}
+MYSQL_HOST='127.0.0.1'
+MYSQL_USER='root'
+MYSQL_PASSWORD=''
+MYSQL_DB='login'
+HEX_SEC_KEY='$2b$12$V1f1XFgNUD0PoK8Vsmym0eJuEvZMV0qxB.qCt3NiISo'
+
+### 2. Run the application:
